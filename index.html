@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mythworn</title>
+<meta name="description" content="A narrative roguelike deckbuilder where your Passion, not your morality, decides who you become.">
+<meta name="theme-color" content="#1c1a18">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon_512.png">
+<link rel="apple-touch-icon" href="assets/favicon_180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mythworn">
+<meta property="og:title" content="Mythworn">
+<meta property="og:description" content="A narrative roguelike deckbuilder where your Passion, not your morality, decides who you become.">
+<meta property="og:url" content="https://mythworn.com/">
+<meta property="og:image" content="https://mythworn.com/assets/og_image_1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mythworn, in a medieval book hand, the M in red.">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root {
+    --ground: #1c1a18;
+    --parchment: #e8dcbd;
+    --faded: #9c9893;
+    --vermilion: #d7301f;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--ground);
+    color: var(--parchment);
+    font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 16px 32px;
+    text-align: center;
+  }
+  h1 { margin: 0; line-height: 0; }
+  h1 img { width: min(88vw, 640px); height: auto; }
+  .line {
+    max-width: 34rem;
+    margin: 2.25rem 0 0;
+    font-size: clamp(1.1rem, 2.6vw, 1.35rem);
+    line-height: 1.5;
+  }
+  .follow {
+    margin: 2.5rem 0 0.75rem;
+    color: var(--faded);
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 1.5rem;
+  }
+  nav a {
+    color: var(--parchment);
+    text-decoration: none;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(232, 220, 189, 0.3);
+    padding-bottom: 2px;
+  }
+  nav a:hover { border-bottom-color: var(--vermilion); }
+  nav a:focus-visible { outline: 2px solid var(--vermilion); outline-offset: 4px; }
+  footer {
+    padding: 0 16px 28px;
+    text-align: center;
+    color: var(--faded);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1><img src="assets/logo_line_1600w.png" srcset="assets/logo_line_800w.png 800w, assets/logo_line_1600w.png 1600w" sizes="(max-width: 727px) 88vw, 640px" width="1600" height="318" alt="Mythworn"></h1>
+  <p class="line">A narrative roguelike deckbuilder where your Passion, not your morality, decides who you become.</p>
+  <p class="follow">In development. Follow along:</p>
+  <nav aria-label="Mythworn elsewhere">
+    <ul>
+      <li><a href="https://bsky.app/profile/mythworn.bsky.social">Bluesky</a></li>
+      <li><a href="https://x.com/Mythworn">X</a></li>
+      <li><a href="https://www.youtube.com/@MythwornGaming">YouTube</a></li>
+      <li><a href="https://www.tiktok.com/@mythworn">TikTok</a></li>
+      <li><a href="https://oddseedgames.itch.io">itch.io</a></li>
+      <li><a href="https://www.reddit.com/user/OddseedGames">Reddit</a></li>
+      <li><a href="https://discord.gg/cyk9Q74pYn">Discord</a></li>
+    </ul>
+  </nav>
+</main>
+<footer>&copy; 2026 Oddseed Games</footer>
+</body>
+</html>
