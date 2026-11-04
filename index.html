@@ -28,7 +28,7 @@
     --foxed: #b8ac93;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; height: 100%; }
+  html, body { margin: 0; }
   body {
     background: var(--ground);
     color: var(--parchment);
@@ -36,6 +36,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-height: 100svh;
   }
   main {
     flex: 1;
@@ -43,19 +44,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 48px 16px 32px;
+    padding: 48px 16px calc(24px + 6vh);
     text-align: center;
   }
-  h1 { margin: 0; line-height: 0; }
-  h1 img { width: min(88vw, 640px); height: auto; }
+  h1 { margin: 0; }
+  h1 img { display: block; margin-inline: auto; width: min(88vw, 640px); height: auto; }
   .line {
     max-width: 34rem;
     margin: 2.25rem 0 0;
-    font-size: clamp(1.1rem, 2.6vw, 1.35rem);
+    font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.35rem);
     line-height: 1.5;
+    text-wrap: balance;
   }
   .follow {
-    margin: 2.5rem 0 0.75rem;
+    margin: 3.5rem 0 0.25rem;
     color: var(--faded);
     font-size: 0.95rem;
     letter-spacing: 0.04em;
@@ -67,17 +69,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.6rem 1.5rem;
+    gap: 0 0.5rem;
   }
   nav a {
+    display: inline-block;
     color: var(--parchment);
-    text-decoration: none;
     font-size: 1.05rem;
-    border-bottom: 1px solid rgba(232, 220, 189, 0.3);
-    padding-bottom: 2px;
+    padding: 0.6rem 0.5rem;
+    text-decoration: underline;
+    text-decoration-color: rgba(232, 220, 189, 0.35);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.3em;
   }
-  nav a:hover { border-bottom-color: var(--vermilion); }
-  nav a:focus-visible { outline: 2px solid var(--vermilion); outline-offset: 4px; }
+  nav a:hover { text-decoration-color: var(--vermilion); }
+  a:focus-visible { outline: 2px solid var(--vermilion); outline-offset: 4px; }
+  footer a { color: inherit; text-decoration: underline; text-decoration-color: rgba(156, 152, 147, 0.5); text-underline-offset: 0.25em; }
+  footer a:hover { color: var(--parchment); }
   @font-face {
     font-family: "Grenze Gotisch";
     src: url("assets/fonts/grenze-gotisch-sub.woff2") format("woff2");
@@ -112,12 +119,15 @@
   .pillars h2::first-letter { color: var(--vermilion); }
   .pillars p {
     margin: 0;
+    text-wrap: pretty;
     color: var(--foxed);
     font-size: 1.02rem;
     line-height: 1.55;
   }
   @media (max-width: 760px) {
     .pillars { grid-template-columns: 1fr; max-width: 26rem; gap: 1.75rem; }
+    .pillars h2 { font-size: 1.4rem; }
+    nav ul { max-width: 20rem; margin-inline: auto; }
   }
   footer {
     padding: 0 16px 28px;
